@@ -1,0 +1,146 @@
+* {
+    margin: 0px auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    position: relative;
+}
+
+.alll {
+    display: flex;
+    align-items: flex-start;
+}
+
+.alll article {
+    background-color: #fefded;
+    flex-grow: 1;
+    width: 130px;
+}
+
+.alll article h1 {
+    font-size: 40px;
+    margin-top: 15px;
+    margin-left: 45px;
+    letter-spacing: 5px;
+    color: #2c3333;
+}
+
+.alll article a {
+    text-decoration: none;
+}
+
+article ul {
+    margin-top: 140px;
+    height: 100vh;
+    list-style: none;
+}
+
+article ul a {
+    display: inline-block;
+    text-decoration: none;
+    text-align: left;
+    padding: 10px 25px 10px 5px;
+    margin: 5px 0px 5px 10px;
+}
+
+article a:hover {
+    width: 90%;
+    background-color: #ded0b6;
+    border-radius: 7px;
+}
+
+article a:active {
+    color: #f3eeea;
+}
+
+.alll section {
+    flex-grow: 3;
+}
+
+header {
+    height: 80px;
+    background-color: #f1eedc;
+    display: flex;
+}
+
+header h1 {
+    margin-top: 5px;
+    margin-left: 15px;
+    color: #31363f;
+}
+
+header .sreach {
+    height: 45px;
+    display: flex;
+}
+
+.sreach form {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.sreach form input {
+    height: 40px;
+    width: 650px;
+    border-radius: 999px;
+    border: 1px solid #eadfb4;
+    margin-right: 45px;
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+.sreach form input:hover {
+    background-color: #f9f9f1;
+}
+
+aside {
+    height: 2500px;
+    background-color: #a2a378;
+}
+
+aside .btn_add {
+    margin: 50px 0 0 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.btn_add a {
+    text-decoration: none;
+}
+
+aside table {
+    padding: 20px;
+    background-color: #eeeeee;
+    border-collapse: collapse;
+    border: 1px solid #686d76;
+}
+
+table th,
+table td {
+    padding: 6px 10px;
+}
+
+table td {
+    border-right: 1px solid #686d76;
+}
+
+table td:last-of-type {
+    border-right: none;
+}
+
+table .th {
+    border-bottom: 1px solid #686d76;
+}
+
+table .tdd a {
+    padding: 4px;
+    text-decoration: none;
+}
+
+.tdd a + .tdd a {
+    margin-right: 4px;
+}
