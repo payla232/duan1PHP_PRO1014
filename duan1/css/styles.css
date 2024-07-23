@@ -201,10 +201,14 @@ aside .spct {
     justify-content: flex-start;
 }
 
-.title .like {
+.title .yt {
+    margin-top: 20px;
+}
+
+.title .yt .like {
     text-decoration: none;
-    margin-top: 15px;
-    padding: 12px 14px;
+    padding: 10px 12px;
+    border-radius: 6px;
     background-color: #5a72a0;
     color: #fff;
 }

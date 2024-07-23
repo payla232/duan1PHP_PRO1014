@@ -30,7 +30,7 @@
                 </form>
                 <div>
                     <i class="fa-regular fa-heart"></i>
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a href="./view/giohang.php"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
             </section>
         </header>
@@ -44,7 +44,7 @@
             <ul class="sub-menu sub2">
                 <li><a href="#!">Sale</a></li>
                 <li><a href="./view/login/dangnhap.php">Đăng nhập</a></li>
-                <li><a href="./view/login/dangky.php">Đăng ký</a></li>
+                <li><a href="./view/login/signup.php">Đăng ký</a></li>
             </ul>
         </nav>
         <section class="banner">

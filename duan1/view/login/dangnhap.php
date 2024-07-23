@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../../css/login_signup.css">
+        <link rel="stylesheet" href="../../css/login_signup.css?<?=time();?>">
         <!-- font-size -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,23 +14,30 @@
         <title>Document</title>
     </head>
     <body>
-        <div class="page">
+    <div class="page">
             <div class="form">
                 <div class="form_img">
-                    <img src="../../img/banner_login.jpg" alt="">
+                    <img src="../../img/default.jpg" alt="" />
                 </div>
                 <div class="form_title">
-                    <h2>Đăng nhập</h2>
+                    <h2>Welcome to TDI</h2>
                     <form action="">
-                        <div class="row">
+                        <div class="column">
                             <label for="">Tài khoản</label>
-                            <input type="text">
+                            <input type="text" />
                         </div>
-                        <div class="row">
+                        <div class="column">
                             <label for="">Mật khẩu</label>
-                            <input type="text">
+                            <input type="text" />
                         </div>
+                        <button type="submit" class="btn_login">
+                            Đăng nhập
+                        </button>
                     </form>
+                    <div class="more_login">
+                        <span><a href="#!">Quên mật khẩu?</a></span>
+                        <span>Chưa có tài khoản?<a href="./signup.php"> Đăng ký</a></span>
+                    </div>
                 </div>
             </div>
         </div>

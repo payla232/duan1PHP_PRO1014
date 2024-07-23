@@ -41,8 +41,8 @@
                 <div class="btn_link">
                     <button class="btn_spct">THÊM VÀO GIỎ</button>
                     <button class="btn_spct">MUA NGAY</button>
-                </div>
-                <div>
+                </div> 
+                <div class="yt">
                     <a href="#!" class="like">
                         <i class="fa-regular fa-heart"></i>
                         <span class="like_sub">Thêm vào yêu thích</span>
