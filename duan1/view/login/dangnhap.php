@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- css -->
         <link rel="stylesheet" href="../../css/login_signup.css?<?=time();?>">
         <!-- font-size -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
