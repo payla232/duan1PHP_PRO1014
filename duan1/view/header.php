@@ -30,8 +30,8 @@
                 </form>
                 <div>
                     <i class="fa-regular fa-heart"></i>
-                    <a href="./view/giohang.php"><i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
+                    <a href="./view/cart/giohang.php"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div> 
             </section>
         </header>
         <nav>
