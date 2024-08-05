@@ -24,12 +24,12 @@
                     <h2>Welcome to TDI</h2>
                     <form action="">
                         <div class="column">
-                            <label for="">Tài khoản</label>
-                            <input type="text" />
+                            <label for="account">Tài khoản</label>
+                            <input type="text" id="account" placeholder="Tài khoản..."/>
                         </div>
                         <div class="column">
-                            <label for="">Mật khẩu</label>
-                            <input type="text" />
+                            <label for="password">Mật khẩu</label>
+                            <input type="text" id="password" placeholder="Mật khẩu..."/>
                         </div>
                         <button type="submit" class="btn_login">
                             Đăng nhập

@@ -22,37 +22,37 @@
                 <form action="">
                     <div class="row">
                         <div class="column">
-                            <label for="">Họ</label>
-                            <input type="text" />  
+                            <label for="firstName">Họ</label>
+                            <input type="text" id="firstName" placeholder="Họ"/>  
                         </div>
                         <div class="column">
-                            <label for="">Tên</label>
-                            <input type="text" />
+                            <label for="lastName">Tên</label>
+                            <input type="text" id="lastName" placeholder="Tên"/>
                         </div>
                     </div>
                     <div class="row">
                         <div class="column">
-                            <label for="">Email</label>
-                            <input type="email" />
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="abc@domain.com"/>
                         </div>
                         <div class="column">
-                            <label for="">SĐT</label>
-                            <input type="number" />
+                            <label for="sdt">SĐT</label>
+                            <input type="number" id="sdt" placeholder="+8189898989"/>
                         </div>
                     </div>
                     <div class="column">
-                        <label for="">Tài khoản</label>
-                        <input type="text" />
+                        <label for="account">Tài khoản</label>
+                        <input type="text" id="account" placeholder="Tài khoản..."/>
                     </div>
                     <div class="column">
-                        <label for="">Mật khẩu</label>
-                        <input type="text" />
+                        <label for="password">Mật khẩu</label>
+                        <input type="text" id="password" placeholder="Mật khẩu..."/>
                     </div>
                     <div class="column">
-                        <label for="">Nhập lại mật khẩu</label>
-                        <input type="text" />
+                        <label for="confirm_password">Nhập lại mật khẩu</label>
+                        <input type="text" id="confirm_password" placeholder="Mật khẩu..."/>
                     </div>
-                    <button type="submit" class="btn_login btn_signup">Đăng ký</button>
+                    <button type="submit" class=" btn_signup">Đăng ký</button>
                     <span class="more_signup"
                         >Đã có tài khoản?<a href="./dangnhap.php">Đăng nhập</a></span
                     >
