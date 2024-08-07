@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <!-- CSS -->
-        <link rel="stylesheet" href="../css/curd.css?<?=time();?>" />
+        <link rel="stylesheet" href="../css/curd.css" />
         <!-- font-size -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,12 +13,6 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
         />
-        <!-- icon -->
-        <link rel="stylesheet" 
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
-            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
-            crossorigin="anonymous" 
-            referrerpolicy="no-referrer" />
     </head>
     <body>
         <div class="alll">
@@ -42,7 +36,7 @@
                     </div>
                 </header>
                 <aside style="background-color: #4793af">
-                    <button class="btn_add"><i class="fa-solid fa-circle-plus"></i><a href="?act=them">Nhập thêm sản phẩm</a></button>
+                    <button class="btn_add"><a href="?act=them">Nhập thêm sản phẩm</a></button>
                     <div class="table">
                         <table>
                             <thead>
@@ -71,8 +65,8 @@
                                     <td><?= $endday_cate ?></td>
                                     <td><?= $from_cate ?></td>
                                     <td class="tdd">
-                                        <button id="btn_sua"><a href="?act=sua&id_cate=<?= $id_cate ?>"><i class="fa-solid fa-screwdriver-wrench"></i> Sửa</a></button>
-                                        <button id="btn_xoa"><a href="?act=xoa&id_cate=<?= $id_cate ?>" onclick="return confirm('Bạn muốn xóa')" ><i class="fa-solid fa-trash"></i> Xóa</a></button>
+                                        <button><a href="?act=sua&id_cate=<?= $id_cate ?>">Sửa</a></button>
+                                        <button><a href="?act=xoa&id_cate=<?= $id_cate ?>" onclick="return confirm('Bạn muốn xóa')" >Xóa</a></button>
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>

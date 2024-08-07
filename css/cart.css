@@ -1,0 +1,382 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.width_body {
+    margin: 0 auto;
+    width: 80%;
+}
+
+header .sreach {
+    height: 45px;
+    display: flex;
+}
+
+.sreach form {
+    flex-grow: 2;
+    text-align: right;
+}
+
+.sreach form input {
+    height: 40px;
+    width: 650px;
+    border-radius: 999px;
+    border: 1px solid #eadfb4;
+    margin-right: 45px;
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+.sreach form input:hover {
+    background-color: #f9f9f1;
+}
+
+.sreach div {
+    flex-grow: 1;
+}
+
+.sreach div i {
+    font-size: 20px;
+    margin-left: 15px;
+    padding: 20px;
+    color: #070f2b;
+}
+
+.sreach i:hover {
+    background-color: #f9f9f1;
+    border-radius: 18px;
+    padding: 9px 20px;
+}
+
+.tab_lest {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.tab_lest .left {
+    display: flex;
+    align-items: center;
+    text-align: start;
+}
+
+.tab_lest .left a {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.tab_lest .left a::after {
+    position: absolute;
+    top: 0;
+    right: -7px;
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 42px;
+    background: #070f2b;
+}
+
+.tab_lest .left .home {
+    margin-left: 14px;
+    font-size: 18px;
+}
+
+.tab_lest .right i {
+    font-size: 26px;
+    color: black;
+}
+
+.table {
+    display: flex;
+    align-items: center;
+    font-weight: 450;
+    background: #f8f6e3;
+    margin-top: 40px;
+    border-radius: 8px;
+    height: 45px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.table .table-l {
+    flex-grow: 1;
+    padding-left: 75px;
+}
+
+.table .table-r {
+    margin: 0 50px;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.product .left {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+}
+
+.product .left_img {
+    width: 110px;
+    margin: 0 10px 0 20px;
+}
+
+.product .left_img img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.product .left .name {
+    margin-top: 5px;
+}
+
+.product .right {
+    width: 11%;
+}
+
+.product .delete {
+    text-align: center;
+    background-color: #c80036;
+    color: #f9f9f1;
+    padding: 8px 16px;
+    margin-left: 22px;
+    border-radius: 8px;
+    border: none;
+}
+
+.product .price_total {
+    color: #c80036;
+}
+
+.product .price {
+    color: #c80036;
+}
+
+.product + .product {
+    margin-top: 15px;
+}
+
+.box {
+    height: 530px;
+    overflow: auto;
+    padding: 0 8px;
+}
+
+.order {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    background: #f8f6e3;
+    padding: 10px;
+}
+
+.order .order_price {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.order .order_price p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.order .order_buy {
+    margin: 20px;
+}
+
+.order .order_buy a {
+    padding: 14px 22px;
+    background: #ecceae;
+    color: #070f2b;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+.types {
+    background: #f8f6e3;
+}
+
+.buy {
+    display: flex;
+}
+
+.buy .buy_box {
+    background: #eadfb4;
+    padding: 0 25px;
+    margin-left: auto;
+}
+
+.buy .buy_total {
+    display: flex;
+    align-items: center;
+}
+
+.buy .btn_buy {
+    margin-left: auto;
+    padding: 14px 22px;
+    background: #ecceae;
+    color: #070f2b;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+.buy + .buy {
+    margin-top: 15px;
+}
+
+.more_product {
+    margin-top: 50px;
+}
+
+.more_product .like_that {
+    width: 250px;
+    background-color: #f8f6e3;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px 0 0;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.more_product .more_img {
+    /* margin-top: 15px; */
+    display: flex;
+    overflow-x: auto;
+}
+
+.more_product .more_img img {
+    min-height: 170px;
+    width: 18%;
+    margin: 10px 30px 20px 0;
+    flex-shrink: 0;
+}
+
+footer {
+    height: 450px;
+    margin-top: 100px;
+    background-color: #f3f3f3;
+    position: relative;
+}
+
+.alll {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    display: flex;
+    justify-content: center;
+    line-height: 1.9;
+}
+
+.alll .small ul {
+    list-style: none;
+}
+
+.alll .small p {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.alll .small a {
+    text-decoration: none;
+    color: #333;
+}
+
+.small .hl {
+    color: red;
+    font-size: 20px;
+}
+
+.license {
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    background-color: #fff;
+    padding: 10px 20px;
+}
+
+.license p {
+    display: inline-block;
+    border-left: 1px solid #707070;
+    padding: 0 15px;
+}
+
+.license p:first-child {
+    border-left: none;
+}
+
+.license a {
+    text-decoration: none;
+    color: var(--parmary-color);
+}
+
+.license a:hover {
+    text-decoration: underline;
+}
+
+.from-amount {
+    border: 1px solid;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px;
+    line-height: 20px;
+}
+
+.from-amount > span {
+    width: 50%;
+    padding: 5px;
+}
+
+.from-amount > span:nth-child(1) {
+    border-right: 1px solid;
+}
+
+.from-amount > span:nth-child(2) {
+    width: 100%;
+}
+
+.from-amount > span:nth-child(3) {
+    border-left: 1px solid;
+}
+
+.from-amount > span > input::-webkit-outer-spin-button,
+.from-amount > span > input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.from-amount > span > input {
+    padding: 0px;
+    width: 100%;
+    border: 0px;
+    text-align: center;
+}
+
+.from-amount > span > input:focus {
+    outline: 0;
+}
+
+.text-center {
+    text-align: center;
+}

@@ -17,8 +17,7 @@ body {
 
 .alll article {
     background-color: #fefded;
-    flex-grow: 1;
-    width: 130px;
+    width: 230px;
 }
 
 .alll article h1 {
@@ -44,7 +43,7 @@ article ul a {
     text-decoration: none;
     text-align: left;
     padding: 10px 25px 10px 5px;
-    margin: 5px 0px 5px 10px;
+    margin: 5px 10px;
 }
 
 article a:hover {
@@ -58,7 +57,7 @@ article a:active {
 }
 
 .alll section {
-    flex-grow: 3;
+    flex-grow: 1;
 }
 
 header {
@@ -97,76 +96,58 @@ header .sreach {
     background-color: #f9f9f1;
 }
 
+/* CSS các thuộc tính */
 aside {
-    height: 2500px;
-    background-color: #a2a378;
+    height: 800px;
+    width: 100%;
+    display: flex;
+    background-color: #a9b388;
 }
 
-aside .btn_add {
-    margin: 50px 0 0 10px;
-    padding: 10px;
-    border-radius: 8px;
-    background: #399918;
-    color: #fff;
-    border-color: #fff;
-}
-
-.btn_add a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.btn_add i {
-    font-size: 16px;
-    margin-right: 5px;
-}
-
-aside table {
+aside .forall {
+    margin: 30px auto 0;
+    width: 450px;
+    height: 500px;
     padding: 20px;
-    background-color: #eeeeee;
-    border-collapse: collapse;
-    border: 1px solid #686d76;
+    background-color: #f3eeea;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-table th,
-table td {
-    padding: 6px 10px;
+aside .forall h2 {
+    text-align: center;
+    margin-bottom: 28px;
 }
 
-table td {
-    border-right: 1px solid #686d76;
+aside .forall .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0px;
 }
 
-table td:last-of-type {
-    border-right: none;
+aside .forall .row label {
+    min-width: 150px;
 }
 
-table .th {
-    border-bottom: 1px solid #686d76;
+aside .forall .row input,
+aside .forall .row select {
+    flex-grow: 1;
+    height: 25px;
 }
 
-table .tdd #btn_xoa {
-    background-color: #c80036;
-    border-color: #c80036;
-}
-
-table .tdd #btn_sua {
-    border-color: #eeeeee;
-}
-
-#btn_xoa a {
-    color: #fff;
-}
-
-table button {
-    padding: 6px 10px;
+aside .forall .btn {
+    margin-top: 20px;
+    padding: 8px 16px;
     border-radius: 4px;
+    color: #f3eeea;
+    background-color: #5f6f52;
 }
 
-table .tdd a {
+.forall .call_back {
     text-decoration: none;
-}
-
-.tdd button + button {
-    margin-left: 6px;
+    padding: 8px 16px;
+    background-color: #5f6f52;
 }
