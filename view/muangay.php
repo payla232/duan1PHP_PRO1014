@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- css -->
-        <link rel="stylesheet" href="../../css/cart.css" />
+        <link rel="stylesheet" href="../css/cart.css" />
         <!-- font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +20,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <title>Giỏ hàng</title>
+        <title>Thanh toán</title>
     </head>
     <body>
         <div class="width_body">
@@ -31,7 +31,7 @@
                     </form>
                     <div>
                         <i class="fa-regular fa-heart"></i>
-                        <a href="./view/giohang.php"
+                        <a href="./giohang.php"
                             ><i class="fa-solid fa-cart-shopping"></i
                         ></a>
                     </div>
@@ -39,79 +39,86 @@
             </header>
             <section class="tab_lest">
                 <div class="left">
-                    <div class="logo"><a href="../../index1.php">TDI</a></div>
-                    <span class="home">Giỏ hàng</span>
+                    <div class="logo"><a href="../index1.php">TDI</a></div>
+                    <span class="home">Thanh toán</span>
                 </div>
                 <div class="right">
-                    <a href="#!"><i class="fa-solid fa-house"></i></a>
+                    <a href="../index1.php"><i class="fa-solid fa-house"></i></a>
             </section>
             <section class="table">
                 <div class="table-l">Sản phẩm</div>
                 <div class="table-r">Số lượng</div>
                 <div class="table-r">Đơn giá</div>
-                <div class="table-r">Thao tác</div>
+                <div class="table-r">Thành tiền</div>
             </section>
+            
             <div class="box">
                 <section class="product">
                     <div class="left">
-                        <div class="left_img"><img src="../../img/default.jpg" alt="" /></div>
+                        <div class="left_img"><img src="../img/default.jpg" alt="" /></div>
                         <div class="name"><p>Tên sản phẩm</p></div>
                     </div>
                     <div class="right">số lượng</div>
                     <div class="right price">Giá tiền</div>
-                    <div class="right"><button class="delete">Xóa</button></div>
-                </section>
-                
-                <section class="product">
-                    <div class="left">
-                        <div class="left_img"><img src="../../img/default.jpg" alt="" /></div>
-                        <div class="name"><p>Tên sản phẩm</p></div>
-                    </div>
-                    <div class="right">số lượng</div>
-                    <div class="right price">Giá tiền</div>
-                    <div class="right"><button class="delete">Xóa</button></div>
+                    <div class="right price_total">thành tiền</div>
                 </section>
                 <section class="product">
                     <div class="left">
-                        <div class="left_img"><img src="../../img/default.jpg" alt="" /></div>
+                        <div class="left_img"><img src="../img/default.jpg" alt="" /></div>
                         <div class="name"><p>Tên sản phẩm</p></div>
                     </div>
                     <div class="right">số lượng</div>
                     <div class="right price">Giá tiền</div>
-                    <div class="right"><button class="delete">Xóa</button></div>
+                    <div class="right price_total">thành tiền</div>
                 </section>
                 <section class="product">
                     <div class="left">
-                        <div class="left_img"><img src="../../img/default.jpg" alt="" /></div>
+                        <div class="left_img"><img src="../img/default.jpg" alt="" /></div>
                         <div class="name"><p>Tên sản phẩm</p></div>
                     </div>
                     <div class="right">số lượng</div>
                     <div class="right price">Giá tiền</div>
-                    <div class="right"><button class="delete">Xóa</button></div>
+                    <div class="right price_total">thành tiền</div>
+                </section>
+                <section class="product">
+                    <div class="left">
+                        <div class="left_img"><img src="../img/default.jpg" alt="" /></div>
+                        <div class="name"><p>Tên sản phẩm</p></div>
+                    </div>
+                    <div class="right">số lượng</div>
+                    <div class="right price">Giá tiền</div>
+                    <div class="right price_total">thành tiền</div>
                 </section>
             </div>
             <section class="order">
                 <div class="order_price">
-                    <p>Tổng thanh toán:</p>
+                    <p>Tổng số tiền:</p>
                     <span>1000</span>
                 </div>
-                <div class="order_buy">
-                    <a href="#!">Mua ngay</a>
+            </section>
+            <section class="types">
+                <h4>Phương thức thanh toán</h4>
+            </section>
+            <section class="buy">
+                <div class="buy_box">
+                    <div class="buy_total">
+                        <p>Tổng tiền hàng:</p>
+                        <span>1000</span>
+                    </div>
+                    <div class="buy_total">
+                        <p>Tổng thanh toán:</p>
+                        <span>1000</span>
+                    </div>               
+                    <div class="buy_total">
+                         <p>Phí vận chuyển:</p>
+                        <span>1000</span>
+                    </div>
                 </div>
             </section>
-            <div class="more_product">
-                <h3 class="like_that">Các sản phẩm tương tự</h3>
-                <div class="more_img">
-                    <img src="../../img/anh12.jpg" alt="">
-                    <img src="../../img/anh12.jpg" alt="">
-                    <img src="../../img/anh12.jpg" alt="">
-                    <img src="../../img/anh12.jpg" alt="">
-                    <img src="../../img/anh12.jpg" alt="">
-                    <img src="../../img/anh12.jpg" alt="">
-                    <img src="../../img/anh12.jpg" alt="">
-                    <img src="../../img/anh12.jpg" alt="">
-                </div>
-            </div>
+            <div class="buy"><a class="btn_buy" href="#!">Đặt hàng</a></div>
+            
+
+            
         </div>
         <footer>
             <div class="alll">
@@ -164,6 +171,5 @@
                 <p><a href="#!">Cookie Policy</a></p>
             </div>
         </footer>
-        
     </body>
 </html>

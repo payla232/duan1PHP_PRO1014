@@ -106,10 +106,19 @@ aside .btn_add {
     margin: 50px 0 0 10px;
     padding: 10px;
     border-radius: 8px;
+    background: #399918;
+    color: #fff;
+    border-color: #fff;
 }
 
 .btn_add a {
     text-decoration: none;
+    color: #fff;
+}
+
+.btn_add i {
+    font-size: 16px;
+    margin-right: 5px;
 }
 
 aside table {
@@ -136,11 +145,28 @@ table .th {
     border-bottom: 1px solid #686d76;
 }
 
+table .tdd #btn_xoa {
+    background-color: #c80036;
+    border-color: #c80036;
+}
+
+table .tdd #btn_sua {
+    border-color: #eeeeee;
+}
+
+#btn_xoa a {
+    color: #fff;
+}
+
+table button {
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
 table .tdd a {
-    padding: 4px;
     text-decoration: none;
 }
 
-.tdd a + .tdd a {
-    margin-right: 4px;
+.tdd button + button {
+    margin-left: 6px;
 }

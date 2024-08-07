@@ -18,7 +18,7 @@
                         <div class="left_img"><img src="img/<?=$getProduct['img'];?>" alt="" /></div>
                         <div class="name"><p><?=$getProduct['name'];?></p></div>
                     </div>
-                    <div class="right from-amount"><span onclick="updateAmount('<?=$row['id'];?>', 'down')"><i class="fas fa-minus"></i></span> <span><input type="number" name="amountCartttt_<?=$row['id'];?>" value="<?=number_format($row['amount']);?>"></span> <span onclick="updateAmount('<?=$row['id'];?>', 'up')"><i class="fas fa-plus"></i></span></div>
+                    <div class="right from-amount"><span class="down_number" onclick="updateAmount('<?=$row['id'];?>', 'down')"><i class="fas fa-minus"></i></span> <span><input type="number" name="amountCartttt_<?=$row['id'];?>" value="<?=number_format($row['amount']);?>"></span> <span class="up_number" onclick="updateAmount('<?=$row['id'];?>', 'up')"><i class="fas fa-plus"></i></span></div>
                     <div class="right text-center price"><?=number_format(locTien($getProduct['price_now']));?>đ</div>
                     <div class="right text-center price"><span id="total_price_<?=$row['id'];?>"><?=number_format($tongTien);?></span>đ</div>
                     <div class="right"><button class="delete">Xóa</button></div>
@@ -31,20 +31,21 @@
                     <span id="tongThanhToan"><?=number_format($tinhTien);?></span>đ
                 </div>
                 <div class="order_buy">
-                    <a href="./muangay.php">Mua ngay</a>
+                    <a href="./view/muangay.php">Mua ngay</a>
                 </div>
             </section>
             <div class="more_product">
                 <h3 class="like_that">Các sản phẩm tương tự</h3>
                 <div class="more_img">
-                    <img src="../../img/anh12.jpg" alt="">
-                    <img src="../../img/anh12.jpg" alt="">
-                    <img src="../../img/anh12.jpg" alt="">
-                    <img src="../../img/anh12.jpg" alt="">
-                    <img src="../../img/anh12.jpg" alt="">
-                    <img src="../../img/anh12.jpg" alt="">
-                    <img src="../../img/anh12.jpg" alt="">
-                    <img src="../../img/anh12.jpg" alt="">
+                    <img src="../img/anh12.jpg" alt="">
+                    <img src="../img/anh12.jpg" alt="">
+                    <img src="../img/anh12.jpg" alt="">
+                    <img src="../img/anh12.jpg" alt="">
+                    <img src="../img/anh12.jpg" alt="">
+                    <img src="../img/anh12.jpg" alt="">
+                    <img src="../img/anh12.jpg" alt="">
+                    <img src="../img/anh12.jpg" alt="">
                 </div>
             </div>
+            
         </div>
