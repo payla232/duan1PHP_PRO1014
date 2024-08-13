@@ -41,16 +41,21 @@
                             action=""
                             method="POST"
                             enctype="multipart/form-data"
+                            onsubmit="return validateForm()"
                         >
                             <input type="hidden" name="id_product" />
                             <div class="row">
                                 <label>Tên sản phẩm:</label>
-                                <input type="text" name="name" />
+                                <input type="text" name="name" id="name" />
+                            </div>
+                            <div class="row">
+                                <label>Giá:</label>
+                                <input type="text" name="price" id="price" />
                             </div>
                             <div class="row">
                                 <label>Ảnh:</label>
                                 <div>
-                                    <input type="file"  name="img_product" />
+                                    <input type="file" name="img_product" id="img_product" accept=".jpg, .jpeg, .png"/>
                                 </div>
                             </div>
                             <div class="row"> 
@@ -63,7 +68,7 @@
                             </div>
                             <div class="row">
                                 <label for="">Nơi nhập khẩu:</label>
-                                <select name="nhapkhau" id="" >
+                                <select name="nhapkhau" id="">
                                     <?php foreach($ds as $cate_sup): ?>
                                         <option value="<?= $cate_sup["from_cate"] ?>"><?= $cate_sup["ten"] ?></option>
                                     <?php endforeach; ?>
@@ -76,5 +81,34 @@
                 </aside>
             </section>
         </div>
+        <script>
+            function validateForm() {
+                var name = document.getElementById("name").value;
+                var price = document.getElementById("price").value;
+                var imgProduct = document.getElementById("img_product").value;
+                var validImageExtensions = [".jpg", ".jpeg", ".png"];
+
+                if (name.trim() === "") {
+                    alert("Tên sản phẩm không được để trống");
+                    return false;
+                }
+
+                if (isNaN(price) || price.trim() === "") {
+                    alert("Giá phải là số và không được để trống");
+                    return false;
+                }
+
+                var isValidImage = validImageExtensions.some(function(extension) {
+                    return imgProduct.toLowerCase().endsWith(extension);
+                });
+
+                if (!isValidImage) {
+                    alert("Ảnh phải đúng định dạng jpg, jpeg, hoặc png");
+                    return false;
+                }
+
+                return true;
+            }
+        </script>
     </body>
 </html>
