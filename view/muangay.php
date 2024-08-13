@@ -1,175 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- css -->
-        <link rel="stylesheet" href="../css/cart.css" />
-        <!-- font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet"
-        />
-        <!-- icon -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-        <title>Thanh toán</title>
-    </head>
-    <body>
-        <div class="width_body">
-            <header>
-                <section class="sreach">
-                    <form action="">
-                        <input type="text" placeholder="   Tìm kiếm..." />
-                    </form>
-                    <div>
-                        <i class="fa-regular fa-heart"></i>
-                        <a href="./giohang.php"
-                            ><i class="fa-solid fa-cart-shopping"></i
-                        ></a>
-                    </div>
-                </section>
-            </header>
-            <section class="tab_lest">
-                <div class="left">
-                    <div class="logo"><a href="../index1.php">TDI</a></div>
-                    <span class="home">Thanh toán</span>
-                </div>
-                <div class="right">
-                    <a href="../index1.php"><i class="fa-solid fa-house"></i></a>
-            </section>
+<link rel="stylesheet" href="css/cart.css?<?= time(); ?>" />
+<div class="width_body">
+    <div class="khanh-flex">
+
+        <div style="width: 100%; margin: 5px">
             <section class="table">
                 <div class="table-l">Sản phẩm</div>
-                <div class="table-r">Số lượng</div>
-                <div class="table-r">Đơn giá</div>
-                <div class="table-r">Thành tiền</div>
+                <div class="table-r">Tổng Tiền</div>
             </section>
-            
             <div class="box">
-                <section class="product">
-                    <div class="left">
-                        <div class="left_img"><img src="../img/default.jpg" alt="" /></div>
-                        <div class="name"><p>Tên sản phẩm</p></div>
-                    </div>
-                    <div class="right">số lượng</div>
-                    <div class="right price">Giá tiền</div>
-                    <div class="right price_total">thành tiền</div>
-                </section>
-                <section class="product">
-                    <div class="left">
-                        <div class="left_img"><img src="../img/default.jpg" alt="" /></div>
-                        <div class="name"><p>Tên sản phẩm</p></div>
-                    </div>
-                    <div class="right">số lượng</div>
-                    <div class="right price">Giá tiền</div>
-                    <div class="right price_total">thành tiền</div>
-                </section>
-                <section class="product">
-                    <div class="left">
-                        <div class="left_img"><img src="../img/default.jpg" alt="" /></div>
-                        <div class="name"><p>Tên sản phẩm</p></div>
-                    </div>
-                    <div class="right">số lượng</div>
-                    <div class="right price">Giá tiền</div>
-                    <div class="right price_total">thành tiền</div>
-                </section>
-                <section class="product">
-                    <div class="left">
-                        <div class="left_img"><img src="../img/default.jpg" alt="" /></div>
-                        <div class="name"><p>Tên sản phẩm</p></div>
-                    </div>
-                    <div class="right">số lượng</div>
-                    <div class="right price">Giá tiền</div>
-                    <div class="right price_total">thành tiền</div>
-                </section>
+                <?php foreach (loadCart() as $row) :
+                    $getProduct = pdo_query_one("SELECT * FROM  `pro_pub` WHERE `id` = '" . $row['id_pro'] . "'");
+                    $tongTien = locTien($getProduct['price_now']) * $row['amount'];
+                    $tinhTien += $tongTien;
+                ?>
+                    <section class="product" id="cartId_<?= $row['id']; ?>">
+                        <div class="left">
+                            <div class="left_img"><img src="img/<?= $getProduct['img']; ?>" alt="" /></div>
+                            <div class="name" style="margin-top: 20px">
+                                <p><?= $getProduct['name']; ?></p>
+                            </div>
+                        </div>
+                        <div class="right text-center"><span><?= number_format($row['amount']); ?> x <?= number_format(locTien($getProduct['price_now'])); ?>đ</span></div>
+                        <div class="right text-center price"><span id="total_price_<?= $row['id']; ?>"><?= number_format($tongTien); ?></span>đ</div>
+                    </section>
+                <?php endforeach; ?>
             </div>
-            <section class="order">
-                <div class="order_price">
-                    <p>Tổng số tiền:</p>
-                    <span>1000</span>
-                </div>
-            </section>
-            <section class="types">
-                <h4>Phương thức thanh toán</h4>
-            </section>
-            <section class="buy">
-                <div class="buy_box">
-                    <div class="buy_total">
-                        <p>Tổng tiền hàng:</p>
-                        <span>1000</span>
-                    </div>
-                    <div class="buy_total">
-                        <p>Tổng thanh toán:</p>
-                        <span>1000</span>
-                    </div>               
-                    <div class="buy_total">
-                         <p>Phí vận chuyển:</p>
-                        <span>1000</span>
-                    </div>
-                </div>
-            </section>
-            <div class="buy"><a class="btn_buy" href="#!">Đặt hàng</a></div>
-            
-
-            
         </div>
-        <footer>
-            <div class="alll">
-                <div class="small">
-                    <p>Công ty TDI Việt Nam</p>
-                    <ul>
-                        <li><a href="#!">Số GCNĐKDN: 2500150543</a></li>
-                        <li>
-                            <a href="#!">Đăng ký lần đầu: Ngày 10/3/2023</a>
-                        </li>
-                        <li>
-                            <a href="#!">Đăng ký thay đổi lần thứ 14: Ngày 11/3/2024</a>
-                        </li>
-                        <li>
-                            <a href="#!"
-                                >Cơ quan cấp: Phòng Đăng ký kinh doanh - Sở kế hoạch và
-                                Đầu tư Vĩnh Phúc</a
-                            >
-                        </li>
-                        <li>
-                            <a href="#!"
-                                >Địa chỉ: Tòa nhà FPT Polytechnic., Cổng số 2, 13 P.
-                                Trịnh Văn Bô, Xuân Phương, Nam Từ Liêm, Hà Nội</a
-                            >
-                        </li>
-                    </ul>
+        <section style="width: 50%; margin: 45px 5px 5px 5px; border-radius: 10px; text-align: left; background: #f8f6e3; padding: 20px;">
+            <h4 style="margin-bottom: 5px; text-align: center">Địa Chỉ Nhận Hàng </h4>
+            <form action="?act=muangay" method="POST">
+                <div class="listAddress">
+                    <div class="from-group">
+                        <label for="">Họ Tên</label>
+                        <input type="text" name="name" placeholder="Nhập Họ Tên" value="<?=($_POST['name'] ?? '');?>">
+                    </div>
+                    <div class="from-group">
+                        <label for="">Số Điện Thoại</label>
+                        <input type="number" name="phone" placeholder="Nhập Số Điện Thoại" value="<?=($_POST['phone'] ?? '');?>">
+                    </div>
+                    <div class="from-group">
+                        <label for="">Địa Chỉ</label>
+                        <input type="text" name="address" placeholder="Nhập Địa Chỉ" value="<?=($_POST['address'] ?? '');?>">
+                    </div>
                 </div>
-                <div class="small">
-                    <p>ĐƯỜNG DÂY NÓNG</p>
-                    <ul>
-                        <li>
-                            <a href="#!"
-                                >Hotline: <strong class="hl">096 490 7815 </strong>(Miễn
-                                phí cho tất cả thuê bao)</a
-                            >
-                        </li>
-                        <li>
-                            Email:
-                            <a href="#!" style="text-decoration: underline; color: red"
-                                >daominhkhanh2020@gmail.com</a
-                            >
-                        </li>
-                    </ul>
+                <br>
+                <h5 style="margin-bottom: 5px">Phương Thức Thanh Toán: </h5>
+                <div class="paymentMethod">
+                    <label for="shipCod">
+                        <input type="radio" name="paymentMethod" id="shipCod" value="Thanh Toán Khi Nhận Hàng" checked>
+                        <span>Thanh Toán Khi Nhận Hàng</span>
+                    </label>
+
+                    <label for="banking">
+                        <input type="radio" name="paymentMethod" id="banking" value="Chuyển Khoản Ngân Hàng">
+                        <span>Chuyển Khoản Ngân Hàng</span>
+                    </label>
                 </div>
-            </div>
-            <div class="license">
-                <p>© 2019. Copyright by TDI VietNam</p>
-                <p><a href="#!">Terms and Conditions</a></p>
-                <p><a href="#!">Privacy Policy</a></p>
-                <p><a href="#!">Cookie Policy</a></p>
-            </div>
-        </footer>
-    </body>
-</html>
+                <div class="text-right" style="margin: 20px 0px 5px 0px">Tổng Tiền: <b class="text-danger"><?= number_format($tinhTien); ?>đ</b></div>
+                <?php if (isset($_POST['buyNow'])) {
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
+    $paymentMethod = $_POST['paymentMethod'];
+
+    if (empty($name) || empty($phone) || empty($address) || empty($paymentMethod)) {
+        echo '<div class="alert alert-danger mb-3">Vui Lòng Nhập Đầy Đủ Thông Tin</div>';
+    } else {
+
+        
+        foreach (loadCart() as $row) :
+            pdo_execute("INSERT INTO `orders`(`trading`, `username`, `id_pro`, `amount`, `status`, `time`) VALUES ('" . rand(100000000, 999999999) . "','" . ($_SESSION['username'] ?? $_SERVER['REMOTE_ADDR']) . "','".$row['id_pro']."','".$row['amount']."','pending','".date("H:i d-m-Y")."') ");
+        endforeach;
+        
+        pdo_query("DELETE FROM `cart` WHERE `username` = '" . ($_SESSION['username'] ?? $_SERVER['REMOTE_ADDR']) . "' ");
+
+        echo '<div class="alert alert-success mb-3">Thành Công, Vui Lòng Tra Cứu Lịch Sử Đơn Hàng</div>';
+    }
+}
+?>
+                <div class="text-right">
+                    <button type="submit" name="buyNow" class="buyNow">Thanh Toán Ngay</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>

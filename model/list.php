@@ -57,3 +57,15 @@
         $numeric_amount = (int)$filtered_amount;
         return $numeric_amount;
     }
+
+    function statusOrders($status) {
+        if($status == "pending") {
+            return 'Chờ Xác Nhận';
+        } else if($status == "delivery") {
+            return 'Đang Giao Hàng';
+        } else if($status == "done") {
+            return 'Đã Giao Hàng';
+        } else if($status == "cancelOrder") {
+            return 'Hủy Đơn';
+        }
+    }

@@ -555,3 +555,76 @@ footer {
 .license a:hover {
     text-decoration: underline;
 }
+
+.khanh-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.listAddress {
+    list-style: none;
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+}
+
+.listAddress > li {
+    margin: 5px 0px;
+    font-size: 14px;
+}
+
+.text-danger {
+    color: crimson;
+}
+
+.buyNow {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #5972a0;
+    text-align: center;
+    color: white;
+    border: none;
+    margin: 10px 0px;
+    font-size: 15px;
+}
+
+.text-right {
+    text-align: right;
+    justify-content: right;
+    right: 0;
+}
+
+.paymentMethod > label {
+    display: block;
+    margin: 10px 0px;
+}
+
+.from-group {
+    margin: 10px 0px;
+}
+
+.from-group > label {
+    display: block;
+    margin: 5px 0px;
+}
+
+.from-group > input {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid;
+}
+
+.alert {
+    padding: 5px 10px;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.alert.alert-danger {
+    color: crimson;
+}
+
+.alert.alert-success {
+    color: #00663f;
+}

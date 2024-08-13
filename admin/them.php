@@ -17,13 +17,12 @@
     <body>
         <div class="alll">
             <article>
-                <a href="./index2.php"><h1>TDI</h1></a>
+                <a href="./index.php"><h1>TDI</h1></a>
                 <ul>
-                    <li><a href="./index2.php">Danh mục</a></li>
-                    <li><a href="./hanghoa.php">Hàng hóa</a></li>
-                    <li><a href="./khachhang.php">Khách hàng</a></li>
-                    <li><a href="./binhluan.php">Quản lý bình luận</a></li>
+                    <li><a href="./index.php">Danh mục</a></li>
+                    <li><a href="./khachhang.php">Quản lý đơn hàng</a></li>
                     <li><a href="./quanly.php">Quản lý người dùng</a></li>
+                    <li><a href="./binhluan.php">Quản lý bình luận</a></li>
                 </ul>
             </article>
             <section>

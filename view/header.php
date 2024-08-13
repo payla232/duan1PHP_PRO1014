@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="css//styles.css?<?= time(); ?>" />
+    <link rel="stylesheet" href="css/styles.css?<?= time(); ?>" />
     <!-- font-size -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,27 +29,31 @@
                 <input type="text" placeholder="   Tìm kiếm..." />
             </form>
             <div>
-                <i class="fa-regular fa-heart"></i>
-                <a href="./index1.php?act=giohang"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="./index.php?act=add_to_wishlist"><i class="fa-regular fa-heart"></i></a>
+                <a href="./index.php?act=giohang"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </section>
     </header>
     <nav>
         <ul class="sub-menu sub1">
-            <li><a href="./index1.php">Trang chủ</a></li>
+            <li><a href="./index.php">Trang chủ</a></li>
             <li><a href="#!">Sản phẩm</a></li>
             <li><a href="#!">Tin tức</a></li>
         </ul>
-        <h1 class="iii"><a href="./index1.php" style="text-decoration: none; color: black;">TDI</a></h1>
+        <h1 class="iii"><a href="./index.php" style="text-decoration: none; color: black;">TDI</a></h1>
         <ul class="sub-menu sub2">
             <li><a href="#!">Sale</a></li>
-            <li><a href="./view/login/dangnhap.php">Đăng nhập</a></li>
-            <li><a href="./view/login/signup.php">Đăng ký</a></li>
+            <?php if(isset($_SESSION['username'])) { ?>
+                <li><a href="?act=taikhoan">Tài khoản</a></li>
+                <li><a href="?act=dangxuat">Đăng Xuất</a></li>
+            <?php } else { ?>
+                <li><a href="./view/login/dangnhap.php">Đăng nhập</a></li>
+                <li><a href="./view/login/signup.php">Đăng ký</a></li>
+            <?php } ?>
         </ul>
     </nav>
+    <?php if($_GET['act'] == "home" || $_GET['act'] == "") { ?>
     <section class="banner">
         <img src="./img/banner-gia-dung1.jpg" alt="" />
     </section>
-</body>
-
-</html>
+    <?php } ?>

@@ -75,5 +75,22 @@ if ($_POST['type'] == "addCart") {
             "tongTien" => number_format($tongTien),
             "tongThanhToan" => number_format($tinhTien),
         ]));
+} else if($_POST['type'] == "delCart") {
+    $id = $_POST['id'];
+
+    pdo_query("DELETE FROM `cart` WHERE `id` = '$id' AND `username` = '" . ($_SESSION['username'] ?? $_SERVER['REMOTE_ADDR']) . "' ");
+
+    $tinhTien = 0;
+    foreach(loadCart() as $row): 
+        $getProduct2 = pdo_query_one("SELECT * FROM  `pro_pub` WHERE `id` = '".$row['id_pro']."'");
+        $tongTien2 = locTien($getProduct2['price_now']) * $row['amount'];
+        $tinhTien += $tongTien2;
+    endforeach;
+
+    die(json_encode([
+            "status" => "success",
+            "msg" => "success",
+            "tongThanhToan" => number_format($tinhTien),
+        ]));
 }
 

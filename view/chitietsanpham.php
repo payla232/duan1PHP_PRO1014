@@ -37,17 +37,30 @@
             <div class="title">
                 <h1><?= $name ?></h1>
                 <p class="price"><?= $price_now ?></p>
-                <p class="status">Trạng thái:  Còn hàng</p>
+                <p class="status">Trạng thái: Còn hàng</p>
                 <div class="btn_link">
-                    <button class="btn_spct" onclick="addCart('<?=$id;?>')" id="addCart" >THÊM VÀO GIỎ</button>
+                    <button class="btn_spct" onclick="addCart('<?= $id; ?>')" id="addCart">THÊM VÀO GIỎ</button>
                     <button class="btn_spct">MUA NGAY</button>
-                </div> 
+                </div>
+                <form action="" method="POST">
+                <?php 
+                if(isset($_POST['addWishlist'])) {
+                    $checkWish = pdo_query_one("SELECT * FROM `wishlist` WHERE `id_pro` = '$id' AND `username` = '".$_SESSION['username']."' ");
+                    if($checkWish) {
+                        pdo_query("UPDATE `wishlist` SET `amount` = '" . $checkWish['amount'] + 1 ."' WHERE `id_pro` = '$id' AND `username` = '".$_SESSION['username']."'  ");
+                    } else {
+                        pdo_query("INSERT INTO `wishlist`(`id_pro`, `username`, `amount`) VALUES ('$id','".$_SESSION['username']."', '1')");
+                    }
+                    echo '<script>alert("Thêm vào yêu thích thành công");location.href=""</script>';
+                }
+                ?>
                 <div class="yt">
-                    <a href="#!" class="like">
+                    <button type="submit" name="addWishlist" class="like">
                         <i class="fa-regular fa-heart"></i>
-                        <span class="like_sub">Thêm vào yêu thích</span>
-                    </a>    
-                </div>            
+                        <span class="like_sub" >Thêm vào yêu thích</span>
+                    </button>
+                </div>
+                </form>
                 <ul class="wrapper anime">
                     <li class="icon facebook">
                         <span class="tooltip">facebook</span>
@@ -81,19 +94,25 @@
             </p>
             <div class="more_product">
                 <h3 class="like_that">Các sản phẩm tương tự</h3>
-                <div class="more_img">
-                    <img src="./img/anh12.jpg" alt="">
-                    <img src="./img/anh12.jpg" alt="">
-                    <img src="./img/anh12.jpg" alt="">
-                    <img src="./img/anh12.jpg" alt="">
-                    <img src="./img/anh12.jpg" alt="">
-                    <img src="./img/anh12.jpg" alt="">
-                    <img src="./img/anh12.jpg" alt="">
-                    <img src="./img/anh12.jpg" alt="">
+                <div class="phphere">
+                <?php foreach (load_all() as $pro_pub) :
+                        extract($pro_pub);
+                    ?>
+                        <div class="product "
+                        style="height: 250px"
+                        >
+                            <a href="?act=chitietsanpham&id=<?= $id ?> " class="connect">
+                                <div class="imgg imggg">
+                                    <img src="./img/<?= $img ?>" alt="" />
+                                </div>
+                                
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
 
-            <a href="./index1.php" class="callback">Back ></a>
+            <a href="./index.php" class="callback">Back ></a>
         </div>
     </div>
 </aside>

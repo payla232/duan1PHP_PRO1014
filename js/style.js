@@ -48,3 +48,15 @@ function loadAmountID(id) {
             }
     }, "json");
 }
+
+function delCart(id) {
+    var formData = {
+        'type': 'delCart',
+        'id': id
+    };
+    $.post("/duan1/model/api.php", formData,
+        function (data) {
+            document.getElementById("cartId_" + id).style.display = "none";
+            $("#tongThanhToan").html(data.tongThanhToan);
+    }, "json");
+}

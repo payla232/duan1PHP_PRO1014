@@ -35,7 +35,7 @@ if((isset($_GET['act']))&&($_GET['act']!="")){
             if(isset($_GET["id_cate"]) && $_GET["id_cate"] > 0) {
                 delete_product($_GET["id_cate"]);
             }
-            header("location: ./index2.php");
+            header("location: ./index.php");
             break;   
         case "them":
             if (isset($_POST["btn_gui"])) {
@@ -55,6 +55,7 @@ if((isset($_GET['act']))&&($_GET['act']!="")){
             include "them.php";
             break; 
                 }
+        
 }else{
     $listall = load_all_list();
     $ds = load_all_cate ();  

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <!-- CSS -->
-        <link rel="stylesheet" href="../css/curd.css" />
+        <link rel="stylesheet" href="../css/curd.css?<?= time(); ?>" />
         <!-- font-size -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,17 +13,21 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
         />
+        <!-- icon -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer" />
     </head>
     <body>
         <div class="alll">
             <article>
-                <a href="./index2.php"><h1>TDI</h1></a>
+                <a href="./index.php"><h1>TDI</h1></a>
                 <ul>
-                    <li><a href="index2.php">Danh mục</a></li>
-                    <li><a href="./hanghoa.php">Hàng hóa</a></li>
-                    <li><a href="./khachhang.php">Khách hàng</a></li>
-                    <li><a href="./binhluan.php">Quản lý bình luận</a></li>
+                    <li><a href="index.php">Danh mục</a></li>
+                    <li><a href="./khachhang.php">Quản lý đơn hàng</a></li>
                     <li><a href="./quanly.php">Quản lý người dùng</a></li>
+                    <li><a href="./binhluan.php">Quản lý bình luận</a></li>
                 </ul>
             </article>
             <section>
@@ -63,10 +67,18 @@
                                     <td><img src="../img/<?= $img_cate?>" style="width:80px; height:80px;" alt=""></td>
                                     <td><?= $starday_cate ?></td>
                                     <td><?= $endday_cate ?></td>
-                                    <td><?= $from_cate ?></td>
+                                    <td><?= $from_cate ?></td> 
                                     <td class="tdd">
-                                        <button><a href="?act=sua&id_cate=<?= $id_cate ?>">Sửa</a></button>
-                                        <button><a href="?act=xoa&id_cate=<?= $id_cate ?>" onclick="return confirm('Bạn muốn xóa')" >Xóa</a></button>
+                                        <button class="btn_sua">
+                                            <a href="?act=sua&id_cate=<?= $id_cate ?>">
+                                                <i class="fa-solid fa-pen-to-square"></i>Sửa
+                                            </a>
+                                        </button>
+                                        <button class="btn_xoa">
+                                            <a href="?act=xoa&id_cate=<?= $id_cate ?>" onclick="return confirm('Bạn muốn xóa')" >
+                                                <i class="fa-solid fa-trash"></i>Xóa
+                                            </a>
+                                        </button>
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>

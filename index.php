@@ -22,6 +22,21 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case "giohang":
             include "./view/giohang.php";
             break;
+        case "add_to_wishlist":
+            include "./view/add_to_wishlist.php";
+            break;
+
+        case "muangay":
+            include "./view/muangay.php";
+            break;
+
+        case "taikhoan":
+            include "./view/taikhoan.php";
+            break;
+
+        case "dangxuat":
+            include "./view/dangxuat.php";
+            break;
     }
 } else {
     $list = load_all();
